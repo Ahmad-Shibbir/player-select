@@ -42,3 +42,19 @@ document.getElementById('calculate-total-btn').addEventListener('click',function
     
     
 })
+
+
+const SelectBtns = document.getElementsByClassName('Select-btn');
+    for (const selectBtn of SelectBtns){
+        selectBtn.addEventListener('click',function(event){
+            const playername = event.target.value;
+            event.target.disabled = true;
+            event.target.style.backgroundColor='gray';  
+        
+            displaySelectedPlayers(playername);
+
+            
+            
+
+        })
+    }

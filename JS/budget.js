@@ -17,7 +17,7 @@ console.log(elementValueInFloat)
 
 // validation checking
 if(elementValueInFloat < 0 || isNaN(elementValueInFloat)){
-    alert('Error!!! \n your input field may be empty / it is not a number number / it is a negetive numer \n\n please enter a positive number');
+    alert('Error!!! \n your input field may be empty / or it is not a number / or it is a negetive numer \n\n please enter a positive number');
 }
 else{
     return elementValueInFloat;

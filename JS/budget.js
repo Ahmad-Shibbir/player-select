@@ -72,11 +72,32 @@ selected player list section
 function displaySelectedPlayers(playername){
 
     const listContainer = document.getElementById('ul-list-container');
+    const playerListLength = document.querySelectorAll( '.player').length +1;
 
+    // element created
     const li = document.createElement('li');    
+    const p = document.createElement('p');    
+    const p2 = document.createElement('p');    
+    const div = document.createElement('div');  
+
+    // set text
     li.innerText = playername;
+    p.innerText = playerListLength;
+    p2.innerText = '. ';
+
+    // calss added 
     li.classList.add('player');
-    listContainer.appendChild(li);
+    p2.classList.add('mr-2');
+    p2.classList.add('font-extrabold');
+    p.classList.add('font-extrabold');
+    div.classList.add('mt-3');
+    div.classList.add('flex');
+
+    // added elements
+    listContainer.appendChild(div)
+    div.appendChild(p);
+    div.appendChild(p2);
+    div.appendChild(li);
     
     
 }

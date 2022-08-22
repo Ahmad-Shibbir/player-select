@@ -26,7 +26,9 @@ function setElementsvalues(elementsValueHolder, elementsValue){
 document.getElementById('calculate-player-expence-btn').addEventListener('click',function(){
     
     const getPlayerExpence = getElementsValues('per-palyer-cost',true);
-    setElementsvalues('player-expence-holder',getPlayerExpence)
+    const playerListLength = document.querySelectorAll( '.player').length;
+    const playerTotalExpence = getPlayerExpence * playerListLength;
+    setElementsvalues('player-expence-holder',playerTotalExpence)
     
 
 
